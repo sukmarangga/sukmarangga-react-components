@@ -15,8 +15,12 @@ React Component ini menggunakan design dari UI milik www.klob.id
 
 ### Installing
 
-- How/where to download your program
-- Any modifications needed to be made to files/folders
+npm i sukmarangga-react-component
+or
+yarn add sukmarangga-react-component
+
+view docs for more information
+https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/docs/klob-ui-components-button--primary
 
 ### Executing program
 
