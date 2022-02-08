@@ -103,7 +103,7 @@ import a from"react";import r from"prop-types";import o,{keyframes as e,css as n
         background-color: ${"#e8e9e9"};
       }
     `}
-`,s=o.div`
+`,l=o.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -148,4 +148,4 @@ import a from"react";import r from"prop-types";import o,{keyframes as e,css as n
         background-color: ${"#27356a"};
       }
     `}
-`;function l({variant:r,size:o,backgroundColor:e,isLoading:n,disabled:t,...c}){return a.createElement(d,i({variant:r,size:o,style:e&&{backgroundColor:e},isLoading:n&&!t||!1,disabled:t||!1},c),c.children,n&&!t&&a.createElement(p,{className:c.className,variant:r}))}function p({className:r,variant:o}){return a.createElement(s,{className:r,variant:o},a.createElement("div",{className:"dot"}),a.createElement("div",{className:"dot"}),a.createElement("div",{className:"dot"}))}l.propTypes={variant:r.oneOf(["primary","secondary","outline"]),backgroundColor:r.string,size:r.oneOf(["small","medium"]),isLoading:r.bool,onClick:r.func,disabled:r.bool},l.defaultProps={backgroundColor:null,variant:"primary",size:"medium",isLoading:!1,onClick:void 0,disabled:!1};export{l as Button};
+`;function s({variant:r,size:o,backgroundColor:e,isLoading:n,disabled:t,...c}){return a.createElement(d,i({variant:r,size:o,style:e&&{backgroundColor:e},isLoading:n&&!t||!1,disabled:t||!1},c),c.children,n&&!t&&a.createElement(p,{className:c.className,variant:r}))}function p({className:r,variant:o}){return a.createElement(l,{className:r,variant:o},a.createElement("div",{className:"dot"}),a.createElement("div",{className:"dot"}),a.createElement("div",{className:"dot"}))}s.propTypes={variant:r.oneOf(["primary","secondary","outline"]),backgroundColor:r.string,size:r.oneOf(["small","medium"]),isLoading:r.bool,onClick:r.func,disabled:r.bool},s.defaultProps={backgroundColor:null,variant:"primary",size:"medium",isLoading:!1,onClick:void 0,disabled:!1};export{s as ButtonKlob};
