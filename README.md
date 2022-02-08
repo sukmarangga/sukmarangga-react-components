@@ -19,7 +19,7 @@ React Component ini menggunakan design dari UI milik www.klob.id
     yarn add klob-ui-components
   ```
 
-### 📖[ Documentation](https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/story/klob-ui-introduction--getting-started)
+### 📖[ Documentation](https://6202368cb531db003aa01da1-gjhdfyjnzn.chromatic.com/)
 
 - 🔨 Usage
 
@@ -32,7 +32,7 @@ React Component ini menggunakan design dari UI milik www.klob.id
   </>
   ```
 
-* For more examples, please refer to the [Documentation](https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/story/klob-ui-introduction--getting-started).
+* For more examples, please refer to the [Documentation](https://6202368cb531db003aa01da1-gjhdfyjnzn.chromatic.com/).
 
 ## Authors
 
