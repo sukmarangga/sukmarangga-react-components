@@ -1,1 +1,1 @@
-export * from "./components/ButtonKlob/ButtonKlob";
+export { default as Button } from "./components/ButtonKlob";

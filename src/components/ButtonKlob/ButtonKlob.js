@@ -1,26 +1,48 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { StyledButton } from "./styles";
+import { StyledButton, Loader } from "./styles";
 
-function ButtonKlob({ variant, size, backgroundColor, ...props }) {
+function ButtonKlob({
+  variant,
+  size,
+  backgroundColor,
+  isLoading,
+  disabled,
+  ...props
+}) {
   return (
     <StyledButton
       variant={variant}
       size={size}
       style={backgroundColor && { backgroundColor }}
+      isLoading={(isLoading && !disabled) || false}
+      disabled={disabled || false}
       {...props}
     >
       {props.children}
+      {isLoading && !disabled && (
+        <Loading className={props.className} variant={variant} />
+      )}
     </StyledButton>
   );
 }
 
 export default ButtonKlob;
 
+function Loading({ className, variant }) {
+  return (
+    <Loader className={className} variant={variant}>
+      <div className="dot" />
+      <div className="dot" />
+      <div className="dot" />
+    </Loader>
+  );
+}
+
 ButtonKlob.propTypes = {
   /**
-   * Is this the principal call to action on the page?
+   * What variant ?
    */
   variant: PropTypes.oneOf(["primary", "secondary", "outline"]),
   /**
@@ -32,14 +54,24 @@ ButtonKlob.propTypes = {
    */
   size: PropTypes.oneOf(["small", "medium"]),
   /**
+   * show loading
+   */
+  isLoading: PropTypes.bool,
+  /**
    * Optional click handler
    */
   onClick: PropTypes.func,
+  /**
+   * What variant ?
+   */
+  disabled: PropTypes.bool,
 };
 
 ButtonKlob.defaultProps = {
   backgroundColor: null,
   variant: "primary",
   size: "medium",
+  isLoading: false,
   onClick: undefined,
+  disabled: false,
 };

@@ -1,6 +1,6 @@
 import React from "react";
 
-import ButtonKklob from "./ButtonKlob";
+import ButtonKlob from "./ButtonKlob";
 
 export default {
   /* 👇 The title prop is optional.
@@ -8,13 +8,13 @@ export default {
    * to learn how to generate automatic titles
    */
   title: "KLOB UI/Components/Button",
-  component: ButtonKklob,
+  component: ButtonKlob,
   argTypes: {
     backgroundColor: { control: "color" },
   },
 };
 
-const Template = (args) => <ButtonKklob {...args}>klob Button</ButtonKklob>;
+const Template = (args) => <ButtonKlob {...args}>klob Button</ButtonKlob>;
 
 export const Primary = Template.bind({});
 Primary.args = {};
@@ -29,4 +29,15 @@ export const Outline = Template.bind({});
 Outline.args = {
   variant: "outline",
   size: "medium",
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+  isLoading: true,
+  disabled: false,
+};
+
+export const Disable = Template.bind({});
+Disable.args = {
+  disabled: true,
 };

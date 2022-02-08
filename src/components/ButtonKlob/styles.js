@@ -1,12 +1,33 @@
-import styled, { css } from "styled-components";
-import { darkSlateBlue, cinnabar, white } from "../../config/utils/theme";
-import { rem, lighten, darken } from "polished";
+import styled, { css, keyframes } from "styled-components";
+import {
+  darkSlateBlue,
+  cinnabar,
+  white,
+  lightGray,
+} from "../../config/utils/theme";
+import { lighten } from "polished";
+
+const dotanim = keyframes`
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+`;
 
 export const StyledButton = styled.button`
   border-radius: 21px;
   text-transform: uppercase;
   border-color: transparent;
   cursor: pointer;
+  /* position: relative; */
 
   ${({ size }) =>
     size === "medium" &&
@@ -82,6 +103,82 @@ export const StyledButton = styled.button`
 
       &:active {
         background-color: ${lighten(0.4, darkSlateBlue)};
+      }
+    `}
+
+
+    ${({ isLoading }) =>
+    isLoading &&
+    css`
+      cursor: not-allowed;
+      opacity: 0.75;
+      position: relative;
+    `}
+
+    ${({ disabled }) =>
+    disabled &&
+    css`
+      cursor: not-allowed;
+      background-color: ${lightGray};
+      color: #747474 !important;
+      border: unset !important;
+      box-shadow: 0px 3px 30px rgba(232, 233, 233, 0.5);
+
+      &:hover {
+        background-color: ${lightGray};
+      }
+    `}
+`;
+
+export const Loader = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-radius: 41px;
+
+  .dot {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 0.8em;
+    background-color: white;
+    transform: scale(0);
+    display: inline-block;
+    animation: ${dotanim} 2s infinite ease-in-out;
+
+    &:nth-child(1) {
+      animation-delay: calc(0.3s * 1);
+    }
+    &:nth-child(2) {
+      animation-delay: calc(0.3s * 2);
+    }
+    &:nth-child(3) {
+      animation-delay: calc(0.3s * 3);
+    }
+  }
+
+  ${({ variant }) =>
+    variant === "primary" &&
+    css`
+      background: ${darkSlateBlue};
+    `}
+
+  ${({ variant }) =>
+    variant === "secondary" &&
+    css`
+      background: ${cinnabar};
+    `}
+
+    ${({ variant }) =>
+    variant === "outline" &&
+    css`
+      background: ${white};
+      .dot {
+        background-color: ${darkSlateBlue};
       }
     `}
 `;

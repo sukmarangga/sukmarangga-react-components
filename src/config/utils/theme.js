@@ -4,4 +4,4 @@ export const sunFlowerYellow = "#ffdd00";
 export const battleShipGrey = "#6b727b";
 export const white = "#fff";
 export const gray = "#e9ecef";
-export const lightGray = "#E8E9E9";
+export const lightGray = "#e8e9e9";
