@@ -8,36 +8,31 @@ React Component ini menggunakan design dari UI milik www.klob.id
 
 ## Getting Started
 
-### Dependencies
+### 📦 Installation
 
-- Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-- ex. Windows 10
+- NPM
+  ```sh
+    npm i klob-ui-components
+  ```
+- YARN
+  ```sh
+    yarn add klob-ui-components
+  ```
 
-### Installing
+### 📖[ Documentation](https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/story/klob-ui-introduction--getting-started)
 
-npm i sukmarangga-react-component
-or
-yarn add sukmarangga-react-component
+- 🔨 Usage
 
-view docs for more information
-https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/docs/klob-ui-components-button--primary
+  ```jsx
+  import { ButtonKlob } from "klob-ui-components";
 
-### Executing program
+  const App = () => (
+  <>
+    <ButtonKlob>klob Button</ButtonKlob>
+  </>
+  ```
 
-- How to run the program
-- Step-by-step bullets
-
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-
-```
-command to run if program contains helper info
-```
+* For more examples, please refer to the [Documentation](https://6202368cb531db003aa01da1-uaszphpite.chromatic.com/?path=/story/klob-ui-introduction--getting-started).
 
 ## Authors
 
