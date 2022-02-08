@@ -1,6 +1,6 @@
 {
   "name": "sukmarangga-react-component",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "belajar buat react component",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
